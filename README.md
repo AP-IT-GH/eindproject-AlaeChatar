@@ -1,2 +1,6 @@
-# eindproject-AlaeChatar
-eindproject-AlaeChatar created by GitHub Classroom
+# eindproject-Vr-Experience
+Team Goondam:
+- Marwan Benali
+- Alae Chatar
+- Niels De Backer
+- Tom Goovaerts
