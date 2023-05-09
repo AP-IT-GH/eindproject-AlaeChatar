@@ -1,4 +1,5 @@
-# eindproject-Vr-Experience - Armored Sentinel
+# Armored Sentinel
+**eindproject VR Experience**
 
 ## Gameplay
 Een high-score style wave surviving game met robots. De speler zit in een first-person VR robot cockpit. Er komen zwermen vijanden rondom op de speler af. De vijanden hebben meerdere patronen (in de lucht, tank). Sommige vijenden kunnen ook schieten op de speler.
