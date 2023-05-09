@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - PlayerBeam
   - PlayerFist
+  - Enemy
+  - RadarBlip
   layers:
   - Default
   - TransparentFX
