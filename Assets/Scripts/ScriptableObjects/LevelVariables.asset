@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82accb9d64299949914a42c18b122aa, type: 3}
   m_Name: LevelVariables
   m_EditorClassIdentifier: 
-  hp: 0
-  energy: 0
-  currentScore: 0
+  hp: 10
+  energy: 100
+  score: 0
