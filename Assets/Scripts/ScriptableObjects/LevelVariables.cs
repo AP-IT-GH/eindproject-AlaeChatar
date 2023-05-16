@@ -5,5 +5,5 @@ public class LevelVariables : ScriptableObject
 {
     public int hp;
     public int energy;
-    public int Hp;
+    public int score;
 }

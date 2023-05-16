@@ -17,12 +17,12 @@ public class EnergyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelVar.Hp = maxEnergy;
+        levelVar.energy = maxEnergy;
     }
 
     // Update is called once per frame
     void Update()
     {
-        textEnergy.text = "Energy: " + levelVar.Hp + "/" + maxEnergy;
+        textEnergy.text = "Energy: " + levelVar.energy + "/" + maxEnergy;
     }
 }

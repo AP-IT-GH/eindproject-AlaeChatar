@@ -15,12 +15,12 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelVar.Hp = 0;
+        levelVar.score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        textScore.text = "Score: " + levelVar.Hp;
+        textScore.text = "Score: " + levelVar.score;
     }
 }

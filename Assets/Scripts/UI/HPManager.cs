@@ -17,12 +17,12 @@ public class HPManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelVar.Hp = maxHp;
+        levelVar.hp = maxHp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        textHp.text = "HP: " + levelVar.Hp + "/" + maxHp;
+        textHp.text = "HP: " + levelVar.hp + "/" + maxHp;
     }
 }
