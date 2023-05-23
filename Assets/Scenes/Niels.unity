@@ -834,7 +834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf82f164e9b63140be7e022368b181a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
 --- !u!54 &364578168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1943,7 +1942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf82f164e9b63140be7e022368b181a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
 --- !u!54 &712900744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2662,6 +2660,7 @@ GameObject:
   - component: {fileID: 1670137820}
   - component: {fileID: 1670137819}
   - component: {fileID: 1670137818}
+  - component: {fileID: 1670137822}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -2747,6 +2746,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1670137822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670137817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1877751896c7afd4f8d0be6003a32e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
+  EnergyDeathValue: 1
+  ScoreDeathValue: 1
+  Hp: 1
 --- !u!1 &2093377530
 GameObject:
   m_ObjectHideFlags: 0

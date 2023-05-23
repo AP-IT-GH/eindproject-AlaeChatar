@@ -3,7 +3,10 @@ guid: b5d92263fc7394f46bc2886b873a6e52
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - blipRedPrefab: {fileID: 4421315373294050459, guid: 85c88997236cc9a4791100823dddebab,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
