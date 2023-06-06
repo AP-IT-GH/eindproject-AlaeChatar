@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
   damage: 1
-  movementSpeed: 4
+  movementSpeed: 2
   player: {fileID: 0}
 --- !u!54 &-8730112003573775728
 Rigidbody:

@@ -16,6 +16,13 @@ public class MoveTowardsTarget : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    void Start() {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
