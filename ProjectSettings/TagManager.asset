@@ -11,6 +11,7 @@ TagManager:
   - PlayerFist
   - Enemy
   - RadarBlip
+  - PlayerBeamWarning
   layers:
   - Default
   - TransparentFX

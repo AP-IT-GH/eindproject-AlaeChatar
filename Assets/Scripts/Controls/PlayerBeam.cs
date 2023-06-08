@@ -7,10 +7,16 @@ using System.Collections.Generic;
 
 public class PlayerBeam : MonoBehaviour
 {
+    [SerializeField]
+    private LevelVariables levelVar;
     [SerializeField] 
     private GameObject beam;
+    [SerializeField]
+    private float cooldown;
+    [SerializeField]
+    private int cost;
     private InputDevice targetDevice;
-
+    private float remainingCooldown;
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
@@ -23,16 +29,26 @@ public class PlayerBeam : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        remainingCooldown -= Time.deltaTime;
+    }
+
     public void FireBeam()
     {
-        Instantiate
-        (
-            beam, 
-            new Vector3(
-                Mathf.Sin(this.transform.rotation.y) * (beam.transform.localScale.z / 2) * -1, 
-                this.transform.position.y, 
-                Mathf.Cos(this.transform.rotation.y) * (beam.transform.localScale.z / 2)),
-            this.transform.rotation
-        );
+        if(remainingCooldown < 0)
+        {
+            Instantiate
+            (
+                beam, 
+                new Vector3(
+                    Mathf.Sin(this.transform.rotation.y) * (beam.transform.localScale.z / 2) * -1, 
+                    1.5f, 
+                    Mathf.Cos(this.transform.rotation.y) * (beam.transform.localScale.z / 2)),
+                this.transform.rotation
+            );
+            remainingCooldown = cooldown;
+            levelVar.energy -= cost;
+        }
     }
 }

@@ -4,15 +4,52 @@ using UnityEngine;
 
 public class BeamBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private float warningTime;
+    [SerializeField]
+    private float dangerTime;
+    [SerializeField]
+    private Material warningMaterial;
+    [SerializeField]
+    private Material dangerMaterial;
+    private float lifeTime;
     void Start()
     {
-        
+        toggleWarning();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        
+        lifeTime += Time.deltaTime;
+        if(lifeTime > warningTime && this.transform.gameObject.tag == "PlayerBeamWarning")
+        {
+            toggleDanger();
+            lifeTime = 0;
+        }
+        else if(lifeTime > dangerTime && this.transform.gameObject.tag == "PlayerBeam")
+        {
+            Destroy(this);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Enemy" && this.transform.gameObject.tag == "PlayerBeam")
+        {
+            EnemyBehaviour enemy = other.gameObject.GetComponent<EnemyBehaviour>();
+            enemy?.HandleHit();
+        }
+    }
+
+    private void toggleDanger()
+    {
+        this.transform.gameObject.tag = "PlayerBeam";
+        this.gameObject.GetComponent<MeshRenderer> ().material = dangerMaterial;
+    }
+
+    private void toggleWarning()
+    {
+        this.transform.gameObject.tag = "PlayerBeamWarning";
+        this.gameObject.GetComponent<MeshRenderer> ().material = warningMaterial;
     }
 }
