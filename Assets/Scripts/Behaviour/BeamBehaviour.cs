@@ -33,14 +33,6 @@ public class BeamBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Enemy" && this.transform.gameObject.tag == "PlayerBeam")
-        {
-            EnemyBehaviour enemy = other.gameObject.GetComponent<EnemyBehaviour>();
-            enemy?.HandleHit();
-        }
-    }
-
     private void toggleDanger()
     {
         this.transform.gameObject.tag = "PlayerBeam";

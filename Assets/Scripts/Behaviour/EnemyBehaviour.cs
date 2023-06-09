@@ -25,4 +25,19 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter(Collider other) 
+    {
+        if(other.gameObject.tag == "PlayerBeam" || other.gameObject.tag == "PlayerFist")
+        {
+            this.HandleHit();
+        }
+        print("waaaa");
+
+        if(other.gameObject.tag == "Player")
+        {
+            levelVar.hp -= 1;
+            Destroy(gameObject);
+        }
+    }
 }

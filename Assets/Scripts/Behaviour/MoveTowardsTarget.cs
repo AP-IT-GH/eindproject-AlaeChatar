@@ -32,12 +32,4 @@ public class MoveTowardsTarget : MonoBehaviour
         //move towards player
         transform.position += transform.forward * Time.deltaTime * movementSpeed;
     }
-
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Player")
-        {
-            levelVar.hp -= 1;
-            Destroy(gameObject);
-        }
-    }
 }
