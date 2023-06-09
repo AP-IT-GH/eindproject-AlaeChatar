@@ -38,14 +38,20 @@ public class PlayerBeam : MonoBehaviour
     {
         if(remainingCooldown < 0)
         {
+
             Instantiate
             (
-                beam, 
+                beam,
                 new Vector3(
-                    Mathf.Sin(this.transform.rotation.y) * (beam.transform.localScale.z / 2) * -1, 
-                    1.5f, 
-                    Mathf.Cos(this.transform.rotation.y) * (beam.transform.localScale.z / 2)),
-                this.transform.rotation
+                    Mathf.Sin( (this.transform.eulerAngles.y * Mathf.PI) / 180 ) * (beam.transform.localScale.z / 2), 
+                    1f, 
+                    Mathf.Cos( (this.transform.eulerAngles.y * Mathf.PI) / 180 ) * (beam.transform.localScale.z / 2)
+                ),
+                Quaternion.Euler(
+                    0,
+                    this.transform.eulerAngles.y,
+                    0
+                )
             );
             remainingCooldown = cooldown;
             levelVar.energy -= cost;

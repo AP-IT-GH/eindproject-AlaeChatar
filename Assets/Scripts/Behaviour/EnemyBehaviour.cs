@@ -32,7 +32,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             this.HandleHit();
         }
-        print("waaaa");
 
         if(other.gameObject.tag == "Player")
         {

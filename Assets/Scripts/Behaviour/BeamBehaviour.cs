@@ -29,7 +29,7 @@ public class BeamBehaviour : MonoBehaviour
         }
         else if(lifeTime > dangerTime && this.transform.gameObject.tag == "PlayerBeam")
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
