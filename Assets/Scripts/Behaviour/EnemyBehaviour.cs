@@ -13,24 +13,19 @@ public class EnemyBehaviour : MonoBehaviour
     private int ScoreDeathValue = 1;
     [SerializeField]
     private int Hp = 1;
-
-    public void HandleHit()
-    {
-        levelVar.score += ScoreDeathValue;
-        levelVar.energy += EnergyDeathValue;
-        Hp -= 1;
-
-        if(Hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    
     void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.tag == "PlayerBeam" || other.gameObject.tag == "PlayerFist")
         {
-            this.HandleHit();
+            levelVar.score += ScoreDeathValue;
+            levelVar.energy += EnergyDeathValue;
+            Hp -= 1;
+
+            if(Hp <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if(other.gameObject.tag == "Player")

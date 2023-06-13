@@ -43,9 +43,9 @@ public class PlayerBeam : MonoBehaviour
             (
                 beam,
                 new Vector3(
-                    Mathf.Sin( (this.transform.eulerAngles.y * Mathf.PI) / 180 ) * (beam.transform.localScale.z / 2), 
+                    this.transform.position.x, 
                     1f, 
-                    Mathf.Cos( (this.transform.eulerAngles.y * Mathf.PI) / 180 ) * (beam.transform.localScale.z / 2)
+                    this.transform.position.z
                 ),
                 Quaternion.Euler(
                     0,
@@ -56,5 +56,8 @@ public class PlayerBeam : MonoBehaviour
             remainingCooldown = cooldown;
             levelVar.energy -= cost;
         }
+    }
+
+    public void PreviewBeam() {
     }
 }
