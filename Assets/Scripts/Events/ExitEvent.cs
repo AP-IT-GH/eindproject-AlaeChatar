@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class ExitScript : MonoBehaviour
+public class ExitEvent : MonoBehaviour
 {
         public void button_exit()
     {
