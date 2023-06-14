@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
@@ -8,27 +6,30 @@ public class EnemyBehaviour : MonoBehaviour
     private LevelVariables levelVar;
 
     [SerializeField]
+    private AudioClip deathSound;
+    [SerializeField]
     private int EnergyDeathValue = 1;
     [SerializeField]
     private int ScoreDeathValue = 1;
     [SerializeField]
     private int Hp = 1;
-    
-    void OnTriggerEnter(Collider other) 
+
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "PlayerBeam" || other.gameObject.tag == "PlayerFist")
+        if (other.gameObject.tag == "PlayerBeam" || other.gameObject.tag == "PlayerFist")
         {
             levelVar.score += ScoreDeathValue;
             levelVar.energy += EnergyDeathValue;
             Hp -= 1;
 
-            if(Hp <= 0)
+            if (Hp <= 0)
             {
+                AudioSource.PlayClipAtPoint(deathSound, this.gameObject.transform.position);
                 Destroy(gameObject);
             }
         }
 
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             levelVar.hp -= 1;
             Destroy(gameObject);
