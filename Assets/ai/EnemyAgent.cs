@@ -37,13 +37,17 @@ public class EnemyAgent : Agent
         transform.Translate(controlSignal * speedmultiplier);
         transform.Rotate(0.0f, rotationmultiplier * actionBuffers.ContinuousActions[1], 0.0f);
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, bullet.transform.localPosition);
+        float distanceToSpawn = Vector3.Distance(this.transform.localPosition, new Vector3(0, 0.5f, 0));
 
         //// player bereikt 
         if (distanceToTarget > 1.42f)
         {
-            AddReward(1f);
-            if (timer >= 5)
+            AddReward(.5f);
+            if (timer >= 4 && distanceToSpawn == 0)
+            {
+                AddReward(.5f);
                 EndEpisode();
+            }
         }
         if (distanceToTarget < 1.42f)
         {
