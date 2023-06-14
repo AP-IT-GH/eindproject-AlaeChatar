@@ -26,12 +26,14 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            print("no");
         }
 
         if(other.gameObject.tag == "Player")
         {
             levelVar.hp -= 1;
             Destroy(gameObject);
+            print("player");
         }
     }
 }

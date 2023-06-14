@@ -16,12 +16,6 @@ public class EnemyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        // reset de positie en orientatie als de enemy valt
-        if (this.transform.localPosition.y < 0)
-        {
-            this.transform.localPosition = new Vector3(0, 0.5f, 0);
-            this.transform.localRotation = Quaternion.identity;
-        }
     }
 
     private void Update()
@@ -33,9 +27,9 @@ public class EnemyAgent : Agent
     {
         // Acties, size = 2    
         Vector3 controlSignal = Vector3.zero;
-        controlSignal.z = actionBuffers.ContinuousActions[0];
+        controlSignal.x = actionBuffers.ContinuousActions[0];
         transform.Translate(controlSignal * speedmultiplier);
-        transform.Rotate(0.0f, rotationmultiplier * actionBuffers.ContinuousActions[1], 0.0f);
+        transform.Rotate(0.0f, 0f, 0.0f);
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, bullet.transform.localPosition);
         float distanceToSpawn = Vector3.Distance(this.transform.localPosition, new Vector3(0, 0.5f, 0));
 
