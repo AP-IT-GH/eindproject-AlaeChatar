@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8785995076725413787}
   - component: {fileID: 8785995076725413786}
   - component: {fileID: 8785995076725413790}
-  - component: {fileID: 5118785866278948943}
   - component: {fileID: -8730112003573775728}
   - component: {fileID: 8960978806299657838}
   - component: {fileID: 1121840074634486225}
@@ -121,22 +120,6 @@ MonoBehaviour:
   EnergyDeathValue: 1
   ScoreDeathValue: 1
   Hp: 1
---- !u!114 &5118785866278948943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8785995076725413785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d820d8f630b20419344907be2ded4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
-  damage: 1
-  movementSpeed: 0
-  player: {fileID: 0}
 --- !u!54 &-8730112003573775728
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -216,7 +199,7 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 8
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
