@@ -17,11 +17,15 @@ public class PlayerBeam : MonoBehaviour
     private int cost;
     private InputDevice targetDevice;
     private float remainingCooldown;
+    LineRenderer line;
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+        line = GetComponent<LineRenderer>();
+        line.positionCount = 2;
+        line.enabled = false;
 
         if (devices.Count > 0)
         {
@@ -32,10 +36,16 @@ public class PlayerBeam : MonoBehaviour
     void Update()
     {
         remainingCooldown -= Time.deltaTime;
+        if(line.enabled)
+        {
+            line.SetPosition(0, transform.position);
+            line.SetPosition(1, transform.forward * 20 + transform.position);
+        }
     }
 
     public void FireBeam()
     {
+        line.enabled = false;
         if(remainingCooldown < 0)
         {
 
@@ -47,11 +57,7 @@ public class PlayerBeam : MonoBehaviour
                     1f, 
                     this.transform.position.z
                 ),
-                Quaternion.Euler(
-                    0,
-                    this.transform.eulerAngles.y,
-                    0
-                )
+                this.transform.rotation
             );
             remainingCooldown = cooldown;
             levelVar.energy -= cost;
@@ -59,5 +65,6 @@ public class PlayerBeam : MonoBehaviour
     }
 
     public void PreviewBeam() {
+        line.enabled = true;
     }
 }
