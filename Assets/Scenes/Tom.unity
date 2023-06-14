@@ -2104,6 +2104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229763972}
   - component: {fileID: 1229763971}
+  - component: {fileID: 1229763973}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -2222,6 +2223,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229763973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229763970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e3d8d5c8ed40441874e481be0e0069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adSource: {fileID: 1229763971}
+  adClips:
+  - {fileID: 8300000, guid: f0ef354e49395c94c8d890848f2ed1f1, type: 3}
+  - {fileID: 8300000, guid: 08d38ad623d9c08429da029b4d3c0dc9, type: 3}
+  - {fileID: 8300000, guid: 6771a4734ffaa6049bf05c0a90fb1d90, type: 3}
 --- !u!1 &1272751339
 GameObject:
   m_ObjectHideFlags: 0
