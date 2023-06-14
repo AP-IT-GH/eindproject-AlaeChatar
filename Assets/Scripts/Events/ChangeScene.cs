@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 
 {
     public int SceneIndex;
 
-    public void StartingGame(){
+    public void ChangingScene(){
         SceneManager.LoadScene(SceneIndex);
     }
 }

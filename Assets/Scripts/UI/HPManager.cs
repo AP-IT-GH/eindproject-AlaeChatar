@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class HPManager : MonoBehaviour
@@ -26,6 +27,11 @@ public class HPManager : MonoBehaviour
         if(levelVar.hp > maxHp)
         {
             levelVar.hp = maxHp;
+        }
+
+        if(levelVar.hp < 1)
+        {
+            SceneManager.LoadScene(2);
         }
         textHp.text = "HP: " + levelVar.hp + "/" + maxHp;
     }
