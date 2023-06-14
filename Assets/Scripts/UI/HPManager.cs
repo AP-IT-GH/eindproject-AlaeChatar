@@ -23,6 +23,10 @@ public class HPManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(levelVar.hp > maxHp)
+        {
+            levelVar.hp = maxHp;
+        }
         textHp.text = "HP: " + levelVar.hp + "/" + maxHp;
     }
 }
