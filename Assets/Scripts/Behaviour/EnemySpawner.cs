@@ -10,11 +10,14 @@ public class EnemySpawner : MonoBehaviour
     private float cooldown;
     [SerializeField]
     private float spawnSpeedIncrement;
+    [SerializeField]
+    private float initialCooldown;
     private float spawnSpeedDifference;
     private float remainingCooldown;
     // Start is called before the first frame update
     void Start()
     {
+        remainingCooldown = initialCooldown;
         spawnSpeedDifference = 0;
     }
 

@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4b38064cb4316748914ac9f56485649, type: 2}
+  - {fileID: 2100000, guid: 21689ab70c8b87c4abb84bc981b45fdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
-  deathSound: {fileID: 8300000, guid: 5ba88ca933c5b4e579c5e971949a6295, type: 3}
+  deathSound: {fileID: 8300000, guid: 01a17d4f3d49e664a85c39ec2de19123, type: 3}
   EnergyDeathValue: 1
   ScoreDeathValue: 1
   Hp: 1
@@ -174,15 +174,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3d02eed8de884b8f8e2df103802faf5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ffd24fcab22f7544bc91bcc4f023bda, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.488
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 110
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
