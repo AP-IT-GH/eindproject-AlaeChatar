@@ -5,7 +5,7 @@
                 "steps": 100001,
                 "file_path": "results\\EnemyAgent\\EnemyAgent\\EnemyAgent-100001.onnx",
                 "reward": 1.0,
-                "creation_time": 1686743290.5997667,
+                "creation_time": 1686756777.7813387,
                 "auxillary_file_paths": [
                     "results\\EnemyAgent\\EnemyAgent\\EnemyAgent-100001.pt"
                 ]
@@ -15,7 +15,7 @@
             "steps": 100001,
             "file_path": "results\\EnemyAgent\\EnemyAgent.onnx",
             "reward": 1.0,
-            "creation_time": 1686743290.5997667,
+            "creation_time": 1686756777.7813387,
             "auxillary_file_paths": [
                 "results\\EnemyAgent\\EnemyAgent\\EnemyAgent-100001.pt"
             ]

@@ -12,6 +12,7 @@ public class EnemyAgent : Agent
     public float rotationmultiplier = 5;
     public GameObject agent;
     public GameObject bullet;
+    private float timer;
 
     public override void OnEpisodeBegin()
     {
@@ -21,6 +22,11 @@ public class EnemyAgent : Agent
             this.transform.localPosition = new Vector3(0, 0.5f, 0);
             this.transform.localRotation = Quaternion.identity;
         }
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -36,7 +42,8 @@ public class EnemyAgent : Agent
         if (distanceToTarget > 1.42f)
         {
             AddReward(1f);
-            EndEpisode();
+            if (timer >= 5)
+                EndEpisode();
         }
         if (distanceToTarget < 1.42f)
         {

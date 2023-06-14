@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 1121840074634486225}
   - component: {fileID: 3175893579375887025}
   - component: {fileID: 8419038104411150445}
-  - component: {fileID: 1434833683723003001}
+  - component: {fileID: 1110348136200788155}
+  - component: {fileID: 3883310291737453264}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -171,7 +172,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 40f95b3c7f059be48ab39086bc764feb, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 0266869f9cdf07148999148e82f4207f, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 2
   m_BehaviorName: EnemyAgent
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 5
   TakeActionsBetweenDecisions: 1
---- !u!114 &1434833683723003001
+--- !u!114 &1110348136200788155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,14 +229,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8785995076725413785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f381f30bb69c414fbb87596b6684f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ef80b122fc2536419b9ec81510c7b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  speedmultiplier: 5
+  speedmultiplier: 0.5
   rotationmultiplier: 5
   agent: {fileID: 8785995076725413785}
   bullet: {fileID: 2576375931304382860, guid: 79e6c12fb80303a409c7c81e3550ca53, type: 3}
+--- !u!114 &3883310291737453264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785995076725413785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d820d8f630b20419344907be2ded4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelVar: {fileID: 11400000, guid: a580e8552807a33448913488fa4f8b66, type: 2}
+  damage: 1
+  movementSpeed: 1
+  player: {fileID: 0}
