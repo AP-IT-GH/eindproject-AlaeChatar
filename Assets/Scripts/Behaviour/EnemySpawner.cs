@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             remainingCooldown = cooldown;
             spawnSpeedDifference += spawnSpeedIncrement;
-            remainingCooldown /= (spawnSpeedIncrement + 1);
+            remainingCooldown /= (spawnSpeedDifference + 1);
         }
     }
 
