@@ -29,7 +29,6 @@ public class EnemyAgent : Agent
         Vector3 controlSignal = Vector3.zero;
         controlSignal.x = actionBuffers.ContinuousActions[0];
         transform.Translate(controlSignal * speedmultiplier);
-        transform.Rotate(0.0f, 0f, 0.0f);
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, bullet.transform.localPosition);
         float distanceToSpawn = Vector3.Distance(this.transform.localPosition, new Vector3(0, 0.5f, 0));
 
