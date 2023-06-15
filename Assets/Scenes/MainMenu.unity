@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003103807, g: 0.0027302764, b: 0.0033076787, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031041282, g: 0.0027308683, b: 0.003308219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -988,19 +988,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 993270925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8d337e8bc7ac4498e0df29e7b8bd5e, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c0d821399bd0d4396957d40d395e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   action:
     m_Name: Action
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: b1928686-b835-4dd4-b39a-a4365b072d7f
+    m_Id: 0fdfdc0f-361b-4b45-9d97-3a0194256454
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 4b7d09a5-aae3-4931-9b8e-dbbeae27dbfd
+      m_Id: abf6393a-c4e7-4604-99cf-3a838733fb5b
       m_Path: '*/{SecondaryButton}'
       m_Interactions: 
       m_Processors: 
@@ -1010,9 +1010,12 @@ MonoBehaviour:
     m_Flags: 0
   OnPress:
     m_PersistentCalls:
+      m_Calls: []
+  OnRelease:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1268686256}
-        m_TargetAssemblyTypeName: ExitScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: ExitEvent, Assembly-CSharp
         m_MethodName: button_exit
         m_Mode: 1
         m_Arguments:
@@ -1023,9 +1026,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnRelease:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1211864492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8557704231179289222, guid: 94722d2f12fff44dc9f81e18afb2f945,
+  m_ModelPrefab: {fileID: 4041521995736930, guid: d24207e15eef8304ab36d8dc12180619,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -2074,7 +2074,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8557704231179289222, guid: 94722d2f12fff44dc9f81e18afb2f945,
+  m_ModelPrefab: {fileID: 4727519396990910, guid: 5d771e075ca418049a9f7cc89d99c16e,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -2345,7 +2345,6 @@ GameObject:
   - component: {fileID: 1667602381}
   - component: {fileID: 1667602380}
   - component: {fileID: 1667602383}
-  - component: {fileID: 1667602384}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -2477,117 +2476,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667602378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acde65f5db6773e49ad668404cf55472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1332273281}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_SelectMode: 0
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  buttonTransform: {fileID: 1667602379}
-  pressDistance: 0.1
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1268686257}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: ChangingScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  OnRelease:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1667602384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667602378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8d337e8bc7ac4498e0df29e7b8bd5e, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c0d821399bd0d4396957d40d395e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   action:
     m_Name: Action
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 744be24b-9d39-43fc-a08e-65eafbb056ee
+    m_Id: 0fdfdc0f-361b-4b45-9d97-3a0194256454
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: a562c116-9fd4-424e-8feb-8eca431f7df7
+      m_Id: abf6393a-c4e7-4604-99cf-3a838733fb5b
       m_Path: '*/{PrimaryButton}'
       m_Interactions: 
       m_Processors: 
@@ -2596,6 +2497,9 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRelease:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1268686257}
@@ -2610,9 +2514,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnRelease:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1722768391
 GameObject:
   m_ObjectHideFlags: 0

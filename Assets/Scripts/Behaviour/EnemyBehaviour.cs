@@ -18,12 +18,14 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "PlayerBeam" || other.gameObject.tag == "PlayerFist")
         {
-            levelVar.score += ScoreDeathValue;
-            levelVar.energy += EnergyDeathValue;
+            print("Hp:" + Hp);
             Hp -= 1;
 
-            if (Hp <= 0)
+            if (Hp == 0)
             {
+                print("i ded:" + EnergyDeathValue);
+                levelVar.score += ScoreDeathValue;
+                levelVar.energy += EnergyDeathValue;
                 AudioSource.PlayClipAtPoint(deathSound, this.gameObject.transform.position);
                 Destroy(gameObject);
             }

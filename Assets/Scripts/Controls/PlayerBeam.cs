@@ -44,27 +44,31 @@ public class PlayerBeam : MonoBehaviour
     }
 
     public void FireBeam()
-    {
+    {   
         line.enabled = false;
-        if(remainingCooldown < 0)
-        {
-
-            Instantiate
-            (
-                beam,
-                new Vector3(
-                    this.transform.position.x, 
-                    1f, 
-                    this.transform.position.z
-                ),
-                this.transform.rotation
-            );
-            remainingCooldown = cooldown;
-            levelVar.energy -= cost;
+        if(levelVar.energy >= 10){
+            
+            if(remainingCooldown < 0)
+            {
+                Instantiate
+                (
+                    beam,
+                    new Vector3(
+                        this.transform.position.x, 
+                        1f, 
+                        this.transform.position.z
+                    ),
+                    this.transform.rotation
+                );
+                remainingCooldown = cooldown;
+                levelVar.energy -= cost;
+            }  
         }
     }
 
     public void PreviewBeam() {
-        line.enabled = true;
+        if(levelVar.energy >= 10){
+            line.enabled = true;
+        }
     }
 }

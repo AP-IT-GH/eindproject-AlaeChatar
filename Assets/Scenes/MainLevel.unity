@@ -217,7 +217,7 @@ MonoBehaviour:
   Enemy: {fileID: 8785995076725413785, guid: 0b8d405096d12414da57eeb50d2ba780, type: 3}
   cooldown: 4
   spawnSpeedIncrement: 0.05
-  initialCooldown: 30
+  initialCooldown: 25
 --- !u!1 &39170736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,14 +1986,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.0037735105, b: 0.581438, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 59688574ceb5085489fa2b782574165b, type: 3}
+  m_Texture: {fileID: 2800000, guid: dd0a223ec63976c4582db15bf06a114d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d92263fc7394f46bc2886b873a6e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radarDistance: 50
+  radarDistance: 25
   blipSize: 10
   usePlayerDirection: 1
   player: {fileID: 1296638267}
@@ -3204,7 +3204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952600550}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Skyline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3902,6 +3902,7 @@ GameObject:
   - component: {fileID: 1104151413}
   - component: {fileID: 1104151417}
   - component: {fileID: 1104151420}
+  - component: {fileID: 1104151421}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: PlayerFist
@@ -4038,7 +4039,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8557704231179289222, guid: 94722d2f12fff44dc9f81e18afb2f945,
+  m_ModelPrefab: {fileID: 4727519396990910, guid: 5d771e075ca418049a9f7cc89d99c16e,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -4231,6 +4232,89 @@ MonoBehaviour:
   beam: {fileID: 2576375931304382860, guid: 79e6c12fb80303a409c7c81e3550ca53, type: 3}
   cooldown: 0.8
   cost: 10
+--- !u!114 &1104151421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104151410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c0d821399bd0d4396957d40d395e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a4515bb6-c298-439b-91ca-c1f0be32272c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 83602d12-9e98-4367-a748-05964d72f482
+      m_Path: <ValveIndexController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: d12ad828-afa6-4d8c-9f00-f9224ce7b49e
+      m_Path: <OpenVROculusTouchController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b473a413-b30a-45a9-ab3b-750371e27ed4
+      m_Path: <OculusTouchController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 14585b90-7d57-45b5-983e-af6efad3ae67
+      m_Path: <XRSimulatedController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1104151420}
+        m_TargetAssemblyTypeName: PlayerBeam, Assembly-CSharp
+        m_MethodName: PreviewBeam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1104151420}
+        m_TargetAssemblyTypeName: PlayerBeam, Assembly-CSharp
+        m_MethodName: FireBeam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1128527477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2881257188815195892, guid: b0ebdb47a9ff84f4abf4ecb21c54c040,
@@ -4877,7 +4961,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296638265}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4885,7 +4969,7 @@ Transform:
   - {fileID: 1732475130}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!136 &1296638268
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4913,6 +4997,7 @@ GameObject:
   - component: {fileID: 1301739382}
   - component: {fileID: 1301739385}
   - component: {fileID: 1301739389}
+  - component: {fileID: 1301739390}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: PlayerFist
@@ -5049,7 +5134,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8557704231179289222, guid: 94722d2f12fff44dc9f81e18afb2f945,
+  m_ModelPrefab: {fileID: 4041521995736930, guid: d24207e15eef8304ab36d8dc12180619,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -5242,6 +5327,89 @@ MonoBehaviour:
   beam: {fileID: 2576375931304382860, guid: 79e6c12fb80303a409c7c81e3550ca53, type: 3}
   cooldown: 0.8
   cost: 10
+--- !u!114 &1301739390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301739379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c0d821399bd0d4396957d40d395e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a4515bb6-c298-439b-91ca-c1f0be32272c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 83602d12-9e98-4367-a748-05964d72f482
+      m_Path: <ValveIndexController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: d12ad828-afa6-4d8c-9f00-f9224ce7b49e
+      m_Path: <OpenVROculusTouchController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b473a413-b30a-45a9-ab3b-750371e27ed4
+      m_Path: <OculusTouchController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 14585b90-7d57-45b5-983e-af6efad3ae67
+      m_Path: <XRSimulatedController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1301739389}
+        m_TargetAssemblyTypeName: PlayerBeam, Assembly-CSharp
+        m_MethodName: PreviewBeam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1301739389}
+        m_TargetAssemblyTypeName: PlayerBeam, Assembly-CSharp
+        m_MethodName: FireBeam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1359703332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6541,14 +6709,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672170262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -35, y: 0, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!4 &1683789939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2933896985116776038, guid: 31b15b1fffd605f449dd5f7af4c3d125,
